@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>Input product</h1>
+    <div class="form-group">
+        <label>Image path</label>
+        <input #ProductImgPath type="text" class="form-control" id="imge-path" placeholder="Enter Image">
+    </div>
+    <div class="form-group">
+        <label>Product's name</label>
+        <input #ProductName type="text" class="form-control" id="product-name" placeholder="Enter name">
+    </div>
+    <div class="form-group">
+        <label>Price</label>
+        <input #ProductPrice type="text" class="form-control" id="product-price" placeholder="Enter price">
+    </div>
+    <button (click)="addProduct( ProductName.value, ProductPrice.value, ProductImgPath.value );
+    ProductName.value =''; ProductPrice.value ='';ProductImgPath.value =''" class="btn btn-primary">Submit</button>
+</div>
