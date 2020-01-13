@@ -1,1 +1,17 @@
-<p>product-list works!</p>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let product of products" class="col">
+            <div class="card mb-3">
+                <h3 class="card-header">{{product.name}}</h3>
+                <img style="height: 200px; width: 100%; display: block;" [src]="product.imgPath" alt="Card image">
+                <div class="card-body">
+                    <h5 class="card-title">Price: {{product.price | currency}} </h5>
+                </div>
+                <div class="card-footer text-muted">
+                    <button type="button" class="btn btn-primary" style="margin-right: 10px;">Buy Now</button>
+                    <button type="button" class="btn btn-outline-primary" style="margin-left: 10px;">Cart +</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
