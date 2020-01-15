@@ -7,19 +7,36 @@ import { Product } from "./product";
   providedIn: 'root'
 })
 export class ProductService {
-  private productsURL= 'http://localhost:3001/product'
+  public products: Array<any>;
+  private productsURL = 'http://localhost:3001/product';
 
   constructor(
     private http: HttpClient,
   ) { }
 
   getProducts(): Observable<Product []> {
-    const path ='';
+    const path = '';
     return this.http.get<Product[]>(this.productsURL + path)
   };
 
+  getProductById(_id: string): Observable<Product> {
+    const path = '';
+    return this.http.get<Product>(this.productsURL + path + '/' + _id);
+  }
+
   addProduct(product: Product): Observable<Product> {
-    const path = '/insert/add'
+    const path = '/insert/add';
     return this.http.post<Product>(this.productsURL + path, product)
   };
+
+  deleteProduct (_id: string ) {
+    const path = '/delete';
+    return this.http.delete<Product>(this.productsURL + path + '/' + _id);
+  }
+
+  updateProduct(product: Product) {
+    const path ='/update';
+    return this.http.put<Product>(this.productsURL + path + '/' + product._id, product );
+  }
+
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from "../product";
 import { ProductService } from "../product.service";
 
+
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -20,8 +21,14 @@ export class ProductListComponent implements OnInit {
     this.productService.getProducts().subscribe(
       (products) => {
         console.log('### Product ', products);
-        this.products = products
-      });
-
+        this.products = products;
+        this.productService.products = products;
+    });
   }
+
+  deleteProduct (product : Product) {
+      this.productService.deleteProduct( product._id).subscribe(
+        data =>  this.getProducts());
+    }
+
 }
