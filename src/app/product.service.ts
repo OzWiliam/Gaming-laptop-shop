@@ -29,14 +29,16 @@ export class ProductService {
     return this.http.post<Product>(this.productsURL + path, product)
   };
 
-  deleteProduct (_id: string ) {
+  deleteProduct (_id: string ): Observable<Product> {
     const path = '/delete';
     return this.http.delete<Product>(this.productsURL + path + '/' + _id);
   }
 
-  updateProduct(product: Product) {
+  updateProduct(product : Product): Observable<Product>  {
     const path ='/update';
-    return this.http.put<Product>(this.productsURL + path + '/' + product._id, product );
+    const updateData = Object.assign({}, product);
+    delete (updateData._id);
+    return this.http.put<Product>(this.productsURL + path + '/' + product._id, updateData );
   }
 
 }

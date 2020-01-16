@@ -10,39 +10,66 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   templateUrl: './product-detail.component.html',
   styleUrls: ['./product-detail.component.css']
 })
+
 export class ProductDetailComponent implements OnInit {
   product: Product;
-  ngForm: FormGroup;
 
   constructor(
     private productService: ProductService,
     private route: ActivatedRoute,
     private location: Location,
     private router: Router,
-  ) { }
-
+  ) {  // this.createForm();
+    this.product = new Product();
+    this.product.name = 'DELL';
+    this.product.price = 123;
+    this.product.imgPath = 'AXXX';
+  }
 
   ngOnInit() {
-    console.log(JSON.stringify(this.productService.products));
+    this.loadData();
   }
-  
+
+ 
+  loadData() {
+    const id = this.route.snapshot.paramMap.get('_id');
+    // console.log('Da goi ', id);
+    this.productService.getProductById(id).subscribe((product: Product) => {
+      // console.log(product);
+      this.product = Object.assign(product[0]);
+    }, (error) => {
+      console.log('ERROR ', error);
+    })
+  }
+
+
   goBack(): void {
     this.location.back();
   }
 
-  updateProduct(name: string, price: number, imgPath: string) {
-    let products = {
-      name: name.trim(),
-      price: price,
-      imgPath: imgPath.trim()
-    };
-    console.log(name, price, imgPath);
-    if (!name || !price || !imgPath) {
-      return console.log('underfined');
-    }
-    this.productService.updateProduct({ name, price, imgPath } as Product)
-  };
+//   save(name, price, imgPath ): void {
+//     console.log('called', this.product)
+//     this.productService.updateProduct(name, price, imgPath, this.product._id);
+//   }
+// }
+
+save(): void {
+  console.log('called', this.product)
+  this.productService.updateProduct(this.product).subscribe( 
+  )
 }
+}
+
+ // createForm() {
+  //   this.ngForm = this.fb.group({
+  //       name: ['', Validators.required ],
+  //       price: ['', Validators.required ],
+  //       imgPath: ['', Validators.required ]
+  //     });
+  //   }
+
+
+
 
 
 
