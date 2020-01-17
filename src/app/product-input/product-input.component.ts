@@ -10,18 +10,15 @@ import { ProductService } from "../product.service";
 export class ProductInputComponent implements OnInit {
   products: Product[] = [];
 
-
   constructor(private productService: ProductService) { }
 
-  ngOnInit() {
-    
-  }
+  ngOnInit() { }
 
   addProduct(name: string, price: number, imgPath: string): void {
     let products = {
-    name: name.trim(),
-    price: price,
-    imgPath: imgPath.trim()
+      name: name.trim(),
+      price: price,
+      imgPath: imgPath.trim()
     };
     console.log(name, price, imgPath);
     if (!name || !price || !imgPath) {
@@ -31,4 +28,5 @@ export class ProductInputComponent implements OnInit {
       (product) => this.products.push(product)
     )
   };
+
 }
