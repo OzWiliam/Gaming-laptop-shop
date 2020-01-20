@@ -26,9 +26,9 @@ export class ProductDetailComponent implements OnInit {
 
   loadData() {
     const id = this.route.snapshot.paramMap.get('_id');
-    // console.log('Da goi ', id);
+    console.log('Da goi ', id);
     this.productService.getProductById(id).subscribe((product: Product) => {
-      // console.log(product);
+      console.log(product);
       this.product = Object.assign(product[0]);
     }, (error) => {
       console.log('ERROR ', error);
@@ -43,7 +43,7 @@ export class ProductDetailComponent implements OnInit {
     console.log('called', this.product)
     this.productService.updateProduct(this.product).subscribe(
     )
-  }
+  };
 }
 
 

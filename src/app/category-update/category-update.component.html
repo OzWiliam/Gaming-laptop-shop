@@ -1,16 +1,17 @@
 <div class="container">
-    <div *ngIf="category">
-        <h1>Input category</h1>
+    <div class="card" style="padding: 50px">
+
+        <h1>Update category</h1>
 
         <div>
-            <label style="font-size: larger; ">Name</label>
-            <input #CategoryName type="text" class="form-control" placeholder="Enter Name">
+            <label style="font-size: larger">Name</label>
+            <input #CategoryName [(ngModel)]="category.category_name" type="text" class="form-control" placeholder="Enter Name">
         </div>
 
-        <button style="margin-top: 10px;" (click)="addCategory( CategoryName.value);
-    CategoryName.value ='';" class="btn btn-primary">Add category
-    </button>
-        <button class="btn btn-danger" (click)="goBack()">Back</button>
+        <div class="form-group" style="padding-top: 50px;">
+            <button type="button" class="btn btn-primary" style="margin-right: 10px;" (click)="save(CategoryName.value)">Submit</button>
+            <button class="btn btn-danger" (click)="goBack()">Back</button>
+        </div>
 
     </div>
 </div>

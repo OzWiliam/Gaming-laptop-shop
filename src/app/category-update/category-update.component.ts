@@ -25,9 +25,9 @@ export class CategoryUpdateComponent implements OnInit {
 
   loadData() {
     const id = this.route.snapshot.paramMap.get('_id');
-    // console.log('Da goi ', id);
+    console.log('Da goi ', id);
     this.categoryService.getCategoryById(id).subscribe((category: Category) => {
-      // console.log(category);
+      console.log(category);
       this.category = Object.assign(category[0]);
     }, (error) => {
       console.log('ERROR ', error);
@@ -42,5 +42,5 @@ export class CategoryUpdateComponent implements OnInit {
     console.log('called', this.category)
     this.categoryService.updateCategory(this.category).subscribe(
     )
-  }
+  };
 }
