@@ -19,7 +19,6 @@ export class CategoryDetailComponent implements OnInit {
   getCategories(): void {
     this.categoryService.getCategories().subscribe(
       (categories) => {
-        console.log('### Category', categories);
         this.categories = categories;
         this.categoryService.categories = categories;
       });
