@@ -10,6 +10,10 @@ import { ProductInputComponent } from './product-input/product-input.component';
 import { ProductComponent } from './product/product.component';
 import { HttpClient, HttpHandler, HttpClientModule } from '@angular/common/http';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { CategoriesComponent } from './categories/categories.component';
+import { CategoryInputComponent } from './category-input/category-input.component';
+import { CategoryDetailComponent } from './category-detail/category-detail.component';
+import { CategoryUpdateComponent } from './category-update/category-update.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +24,10 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     ProductInputComponent,
     ProductComponent,
     ProductDetailComponent,
+    CategoriesComponent,
+    CategoryInputComponent,
+    CategoryDetailComponent,
+    CategoryUpdateComponent,
   ],
   imports: [
     BrowserModule,

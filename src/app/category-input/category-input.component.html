@@ -1,0 +1,14 @@
+<div class="container">
+    <div>
+        <h1>Input category</h1>
+
+        <div>
+            <label style="font-size: larger; ">Name</label>
+            <input #CategoryName type="text" class="form-control" placeholder="Enter Name">
+        </div>
+
+        <button style="margin-top: 10px;" (click)="addCategory( CategoryName.value);
+    CategoryName.value ='';" class="btn btn-primary">Add category
+    </button>
+    </div>
+</div>
