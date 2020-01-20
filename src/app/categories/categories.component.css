@@ -1,0 +1,14 @@
+.container {
+    padding: 20px;
+}
+
+.col {
+    background-color: whitesmoke;
+    padding: 5px;
+    float: right;
+}
+
+.btn-group-vertical {
+    background-color: whitesmoke;
+    float: left;
+}
