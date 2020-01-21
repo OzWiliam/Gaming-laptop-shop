@@ -1,23 +1,36 @@
+<div class="container" style="background-color: whitesmoke; margin-top: 10px;">
+    <h1 style="margin:10px; text-align: center;">Categories</h1>
+    <hr class="my-4">
+    <app-category-detail></app-category-detail>
+</div>
+
 <div class="container">
-    <div *ngIf="product" class="card">
+    <hr class="my-4">
+    <h1 style="text-align: center;">Update product</h1>
+    <div *ngIf="product" class="card" style="background-color: whitesmoke; margin-top: 10px;">
 
         <div class="form-group">
-            <label>Product's name</label>
-            <input #ProductName [(ngModel)]="product.name" type="text" class="form-control" id="product-name" placeholder="Enter name">
+            <label style="font-weight: bold; font-size: x-large;">Product's name</label>
+            <input #ProductName style="font-style: italic ;" [(ngModel)]="product.name" type="text" class="form-control" id="product-name" placeholder="Enter name">
         </div>
 
         <div class="form-group">
-            <label>Price</label>
-            <input #ProductPrice [(ngModel)]="product.price" type="text" class="form-control" id="product-price" placeholder="Enter price">
+            <label style="font-weight: bold; font-size: x-large;">Price</label>
+            <input #ProductPrice style="font-style: italic ;" [(ngModel)]="product.price" type="text" class="form-control" id="product-price" placeholder="Enter price">
         </div>
 
         <div class="form-group">
-            <label>Image path</label>
-            <input #ProducImgPath [(ngModel)]="product.imgPath" type="text" class="form-control" id="imge-path" placeholder="Enter Image">
+            <label style="font-weight: bold; font-size: x-large;">Image path</label>
+            <input #ProducImgPath style="font-style: italic ;" [(ngModel)]="product.imgPath" type="text" class="form-control" id="imge-path" placeholder="Enter Image">
         </div>
 
         <div class="form-group">
-            <button type="button" class="btn btn-primary" style="margin-right: 10px;" (click)="save(ProductName.value, ProductPrice.value, ProducImgPath.value)">Submit</button>
+            <label style="font-weight: bold; font-size: x-large;">Category ID</label>
+            <input #CategoryID style="font-style: italic ;" [(ngModel)]="product.categoryId" type="text" class="form-control" id="category-id" placeholder="Enter category id">
+        </div>
+
+        <div class="form-group">
+            <button type="button" class="btn btn-primary" style="margin-right: 10px;" (click)="save(ProductName.value, ProductPrice.value, ProducImgPath.value, CategoryID.value )">Submit</button>
             <button class="btn btn-danger" (click)="goBack()">Back</button>
         </div>
 
