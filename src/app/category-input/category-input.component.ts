@@ -7,6 +7,7 @@ import { CategoryService } from "../category.service";
   templateUrl: './category-input.component.html',
   styleUrls: ['./category-input.component.css']
 })
+
 export class CategoryInputComponent implements OnInit {
   categories: Category[] = [];
 

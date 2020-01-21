@@ -14,6 +14,8 @@ import { CategoriesComponent } from './categories/categories.component';
 import { CategoryInputComponent } from './category-input/category-input.component';
 import { CategoryDetailComponent } from './category-detail/category-detail.component';
 import { CategoryUpdateComponent } from './category-update/category-update.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { CategoryUpdateComponent } from './category-update/category-update.compo
     CategoryInputComponent,
     CategoryDetailComponent,
     CategoryUpdateComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
