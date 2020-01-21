@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'productlist', component: ProductListComponent },
   { path: 'productinput', component: ProductInputComponent },
   { path: 'detail/:_id', component: ProductDetailComponent },
-  { path: 'categorydetail', component: CategoryDetailComponent },
+  { path: 'categoryinput', component: CategoryInputComponent },
   { path: 'detail-category/:_id', component: CategoryUpdateComponent }
 ];
 

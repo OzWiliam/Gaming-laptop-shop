@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div *ngFor="let category of categories" class="card border-primary mb-3" style="max-width: 20rem;" class="col-3">
-            <div class="card-header" routerLink="update" routerLink="/detail-category/{{category._id}}">{{category._id}}</div>
+            <div class="card-header" routerLink="update" style="font-style: italic;">Copy : {{category._id}}</div>
             <div class="card-body">
                 <h4 class="card-title" routerLink="/detail-category/{{category._id}}">{{category.category_name}}</h4>
                 <button type="button" class="btn btn-primary" style="margin-right: 10px;" routerLink="/detail-category/{{category._id}}">Update</button>
@@ -9,5 +9,4 @@
             </div>
         </div>
     </div>
-    <app-category-input></app-category-input>
 </div>

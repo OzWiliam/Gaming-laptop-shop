@@ -14,7 +14,7 @@ export class ProductInputComponent implements OnInit {
 
   ngOnInit() { }
 
-  addProduct(name: string, price: number, imgPath: string): void {
+  addProduct(name: string, price: number, imgPath: string, categoryId: string ): void {
     let products = {
       name: name.trim(),
       price: price,
@@ -24,7 +24,7 @@ export class ProductInputComponent implements OnInit {
     if (!name || !price || !imgPath) {
       return console.log('underfined');
     }
-    this.productService.addProduct({ name, price, imgPath } as Product).subscribe(
+    this.productService.addProduct({ name, price, imgPath, categoryId } as Product).subscribe(
       (product) => this.products.push(product)
     )
   };

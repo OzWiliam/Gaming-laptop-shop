@@ -1,24 +1,35 @@
-<div class="container">
+<div class="container" style="background-color: whitesmoke; margin-top: 10px;">
+    <h1 style="margin-bottom:10px;">Categories</h1>
+    <app-category-detail></app-category-detail>
+</div>
+
+<div class="container" style="background-color: whitesmoke; margin-top: 10px;">
+
     <h1>Input product</h1>
 
     <div>
         <label>Image path</label>
-        <input #ProductImgPath type="text" class="form-control" id="imge-path" placeholder="Enter Image">
+        <input #ProductImgPath type="text" class="form-control" id="imge-path" placeholder="Enter Image" style="font-style: italic;">
 
     </div>
 
     <div>
         <label>Product's name</label>
-        <input #ProductName type="text" class="form-control" id="product-name" placeholder="Enter name">
+        <input #ProductName type="text" class="form-control" id="product-name" placeholder="Enter name" style="font-style: italic;">
     </div>
 
     <div>
         <label>Price</label>
-        <input #ProductPrice type="text" class="form-control" id="product-price" placeholder="Enter price">
+        <input #ProductPrice type="text" class="form-control" id="product-price" placeholder="Enter price" style="font-style: italic;">
+    </div>
+
+    <div>
+        <label>Category ID</label>
+        <input #CategoryID type="text" class="form-control" id="category-id" placeholder="Enter category id" style="font-style: italic;">
     </div>
 
     <button style="margin-top: 10px;" (click)="addProduct( ProductName.value, ProductPrice.value, ProductImgPath.value);
-    ProductName.value =''; ProductPrice.value ='';ProductImgPath.value =''" class="btn btn-primary">Submit
+    ProductName.value =''; ProductPrice.value ='';ProductImgPath.value =''; CategoryID.value=''" class="btn btn-primary">Submit
     </button>
 
 </div>
