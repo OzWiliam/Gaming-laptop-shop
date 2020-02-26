@@ -8,7 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductInputComponent } from './product-input/product-input.component';
 import { ProductComponent } from './product/product.component';
-import { HttpClient, HttpHandler, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { CategoryInputComponent } from './category-input/category-input.component';
