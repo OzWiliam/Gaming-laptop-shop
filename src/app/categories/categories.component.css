@@ -1,14 +1,23 @@
 .container {
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
-.col {
-    background-color: whitesmoke;
-    padding: 5px;
+.col-4 {
     float: right;
 }
 
 .btn-group-vertical {
-    background-color: whitesmoke;
     float: left;
+}
+
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    object-fit: contain;
+}
+
+h3 {
+    font-size: 16px;
 }

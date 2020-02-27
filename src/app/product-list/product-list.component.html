@@ -1,16 +1,25 @@
 <div class="container">
-    <div class="row">
-        <div *ngFor="let product of products" class="col-3">
-            <div class="card mb-3">
-                <h3 class="card-header" routerLink="/detail/{{product._id}}" style="height: 120px;"><span>{{product.name}}</span></h3>
-                <img style="height: 200px; width: 100%; display: block;" [src]="product.imgPath" alt="Card image">
-                <div class="card-body">
-                    <h5 class="card-title">Price: {{product.price | currency}} </h5>
+    <div class='title'>
+        <h3 class="card-header">Laptop mới</h3>
+    </div>
+    <hr class="my-4">
+    <div class="row" style="margin-bottom: 2px;">
+        <div *ngFor="let product of products" class="col">
+            <div style="box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+            ">
+
+                <img style="height: 200px; width: 200px; align-items: center;  left:50%;" [src]="product.imgPath" alt="Card image">
+
+                <h3 class="product-name" routerLink="/detail/{{product._id}}" style="text-align: center;">
+                    {{product.name}}
+                </h3>
+                <div style="text-align: left;">
+                    <h5 class="card-body">{{product.price | currency}} </h5>
                 </div>
-                <div class="card-footer text-muted">
+                <!-- <div class="card-footer text-muted">
                     <button type="button" class="btn btn-primary" style="margin-right: 10px;" routerLink="/detail/{{product._id}}">Update</button>
                     <button class="btn btn-danger" (click)="deleteProduct(product)">Delete</button>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
