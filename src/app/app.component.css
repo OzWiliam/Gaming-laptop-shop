@@ -1,6 +1,6 @@
-.body {
+/* * {
     background-color: #e9ecef;
-}
+} */
 
 .categories {
     padding-top: 2px;
@@ -11,12 +11,15 @@
     background-color: white;
 }
 
-.footer {
+app-footer {
     position: absolute;
     width: 100%;
     background-color: #1c1d1d;
     text-align: center;
     margin-top: 2px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    box-shadow: 0 0 4px 4px rgba(0, 140, 186, 0.5);
 }

@@ -16,6 +16,8 @@ import { CategoryDetailComponent } from './category-detail/category-detail.compo
 import { CategoryUpdateComponent } from './category-update/category-update.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SliderModule } from "angular-image-slider";
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { RegisterComponent } from './register/register.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    SliderModule
   ],
   providers: [
     HttpClient, 

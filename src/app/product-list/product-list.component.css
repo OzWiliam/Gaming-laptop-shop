@@ -1,23 +1,10 @@
 .product-name {
     font-size: 15px;
-    color: #207bc1;
     display: block;
 }
 
-.product-name:active {
-    text-decoration: underline;
-}
-
-.product-name:visited {
-    text-decoration: none;
-}
-
 .product-name:hover {
-    text-decoration: underline;
-}
-
-.product-name:link {
-    text-decoration: none;
+    color: #207bc1;
 }
 
 .img {
@@ -26,9 +13,13 @@
     justify-content: center;
 }
 
+.items-card:hover {
+    box-shadow: 0 0 4px 4px rgba(0, 140, 186, 0.5);
+}
+
 .container {
     background-color: white;
-    padding-top: 1.5rem;
+    padding-top: 1rem;
     padding-bottom: 20px;
     margin-top: 2px;
     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
